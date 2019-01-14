@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2048小游戏</title>
+	<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="background.css">
+	<link href="./style.css" rel="stylesheet" />
+	<script type="text/javascript" src="planning.js"></script>
+</head>
+<body>
+
+<header>
+<h1><i class="snes-jp-logo brand"></i>2048 GamePlay</h1>
+<p>Join the numbers and get to the 2048 tile!</p>
+</header>
+
+ <a class="github-link" href="" target="_blank">
+      <p class="nes-balloon from-right"> ^ ^<br /> </p>
+      <i class="nes-octocat"></i>
+    </a>
+
+<section class="nes-container with-title is-centered">
+<div class="container">
+	<div class="head">
+		<h1 class="gamename"></h1>
+		<h3 class="maxScore">Highest score:
+			<span id="maxScore">0</span>
+		</h3>
+	</div>
+	<div class="nes-input body nes-table-responsive" id="gameBody" >
+		  <div class="row">
+                <div class="nes-input list emptyItem x0y0 " x="0" y="0" ></div>
+                <div class="nes-input list emptyItem x0y1 " x="0" y="1"></div>
+                <div class="nes-input list emptyItem x0y2 " x="0" y="2"></div>
+                <div class="nes-input list emptyItem x0y3 " x="0" y="3"></div>
+            </div>
+            <div class="row">
+                <div class="nes-input list emptyItem x1y0 " x="1" y="0"></div>
+                <div class="nes-input list emptyItem x1y1 " x="1" y="1"></div>
+                <div class="nes-input list emptyItem x1y2 " x="1" y="2"></div>
+                <div class="nes-input list emptyItem x1y3 " x="1" y="3"></div>
+            </div>
+            <div class="row">
+                <div class="nes-input list emptyItem x2y0 " x="2" y="0"></div>
+                <div class="nes-input list emptyItem x2y1 " x="2" y="1"></div>
+                <div class="nes-input list emptyItem x2y2 " x="2" y="2"></div>
+                <div class="nes-input list emptyItem x2y3 " x="2" y="3"></div>
+            </div>
+            <div class="row">
+                <div class="nes-input list emptyItem x3y0 " x="3" y="0"></div>
+                <div class="nes-input list emptyItem x3y1 " x="3" y="1"></div>
+                <div class="nes-input list emptyItem x3y2 " x="3" y="2"></div>
+                <div class="nes-input list emptyItem x3y3 " x="3" y="3"></div>
+            </div>
+	</div>
+	<div class="prompt">
+		</br>
+		<h4 class="directions">Phonehone operation:Sliding screen</h4>
+		<h4 class="directions">Computer operation:Using the keyboard</h4>
+	</div>
+	
+	<div class="score">
+		<h3>Score:<span id="grameScore">0</span>
+			<button type="button" class="refreshBtn nes-btn is-success">Refresh
+			</button></h3>
+	</div>
+	
+	</section>
+        <div class="modal fade" id="gameOverModal" hidden="true" aria-labelledby="myModalLabel" aria-hidden="true"
+             data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            ×
+                        </button>
+                        <h4 class="modal-tittle" id="myModalLabel">2048小游戏</h4>
+                    </div>
+                    <div class="modal-body">
+                        Game Over!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-danger refreshBtn" onclick="refreshGame()" data-dismiss="modal">再玩一次</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+</body>
+</html>
